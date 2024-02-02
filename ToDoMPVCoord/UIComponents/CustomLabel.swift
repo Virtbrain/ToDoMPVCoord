@@ -7,14 +7,25 @@
 
 import UIKit
 
+//MARK: - CustomLabel
 class CustomLabel: UILabel {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    //MARK: - Initializers
+    init(text: String) {
+        super.init(frame: .zero)
+        setupLabel(text: text)
     }
-    */
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Private Methods
+    private func setupLabel(text: String) {
+        font = .boldSystemFont(ofSize: 20)
+        self.text = text
+        self.textAlignment = .center
+        translatesAutoresizingMaskIntoConstraints = false
+    }
+    
 }

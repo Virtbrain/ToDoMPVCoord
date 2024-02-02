@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol SingleTaskPresenterProtocol {
+    
+}
+
+class SingleTaskPresenter {
+    
+}

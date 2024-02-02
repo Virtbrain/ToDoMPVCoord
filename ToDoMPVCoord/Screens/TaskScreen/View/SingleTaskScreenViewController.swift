@@ -10,31 +10,10 @@ import UIKit
 class SingleTaskScreenViewController: UIViewController {
     
     var onButtonBackTapped: (() -> Void )?
+    var presenter: SingleTaskPresenterProtocol?
     
-    let label = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.font = .systemFont(ofSize: 20)
-        label.text = "SingleTaskScreenViewController"
-        return label
-    }()
-    
-    let button: UIButton = {
-        let button = UIButton(configuration: .plain())
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .blue
-        button.setTitle("Go To Sengle task Screen", for: .normal)
-        button.setTitleColor(UIColor(white: 1, alpha: 0.3), for: .highlighted)
-        button.tintColor = .white
-        button.layer.cornerRadius = 20
-        button.layer.shadowColor = UIColor(named: "black")?.cgColor
-        button.layer.shadowOpacity = 0.2
-        button.layer.shadowRadius = 10
-        button.layer.shadowOffset = CGSize(width: 10, height: 5)
-        
-        return button
-    }()
+    let label = CustomLabel(text: "SingleTaskScreenViewController")
+    let button = CustomButton(bgColor: .systemPink, titleColor: .black, text: "Go to Main Screen")
 
     override func viewDidLoad() {
         super.viewDidLoad()
