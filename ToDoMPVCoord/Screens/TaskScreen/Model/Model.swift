@@ -9,8 +9,9 @@ import Foundation
 
 struct Task {
     var title: String
+    var description: String?
     var state: TaskStates
-    var priority: TaskPriority
+    var priority: TaskPriorities
     let openDate: Date
     let closeDate: Date?
 }

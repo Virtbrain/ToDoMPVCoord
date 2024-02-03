@@ -9,38 +9,25 @@ import UIKit
 
 class MainScreenViewController: UIViewController {
     
-    var onButtonTapped: (() -> Void)?
+    weak var coordinator: Coordinator?
     
-    let button: UIButton = {
-        let button = UIButton(configuration: .plain())
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .orange
-        button.setTitle("Go To Sengle task Screen", for: .normal)
-        button.setTitleColor(UIColor(white: 1, alpha: 0.3), for: .highlighted)
-        button.tintColor = .black
-        button.layer.cornerRadius = 20
-        button.layer.shadowColor = UIColor(named: "black")?.cgColor
-        button.layer.shadowOpacity = 0.2
-        button.layer.shadowRadius = 10
-        button.layer.shadowOffset = CGSize(width: 10, height: 5)
-        
-        return button
-    }()
+//    var onButtonTapped: (() -> Void)?
+    
+    let button = CustomButton(bgColor: buttonBgColor, titleColor: .white, text: "Go to Second Screen")
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = .blue
-        self.setupView()
+        view.backgroundColor = applicationBgColor
+        setupView()
         
     }
     
     private func setupView() {
-        self.view.addSubview(button)
+        view.addSubview(button)
         button.addTarget(self, action: #selector(onButtonPress), for: .touchUpInside)
         NSLayoutConstraint.activate([
-            button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             button.widthAnchor.constraint(equalToConstant: 250),
             button.heightAnchor.constraint(equalToConstant: 60)
             
@@ -48,19 +35,6 @@ class MainScreenViewController: UIViewController {
     }
     
     @objc private func onButtonPress() {
-        print("Button was pressed")
-        onButtonTapped?()
+        coordinator?.showSingleTaskScreen()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

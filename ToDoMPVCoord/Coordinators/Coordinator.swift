@@ -10,7 +10,6 @@ import UIKit
 final class Coordinator {
     
     private let rootViewController = UINavigationController()
-    private let josin = "Josin"
     
     init(in window: UIWindow) {
         window.rootViewController = rootViewController
@@ -18,25 +17,21 @@ final class Coordinator {
     }
     
     func start() {
-        ShowTasksScreen()
-    }
-    
-    //MARK: Private implenemtation
-    private func ShowTasksScreen() {
         let mainScreen = MainScreenViewController()
-        mainScreen.onButtonTapped = { [self] in
-            self.ShowSingleTaskScreen()
-        }
+        mainScreen.coordinator = self
         rootViewController.pushViewController(mainScreen, animated: true)
     }
-    
-    private func ShowSingleTaskScreen() {
+     
+    func showSingleTaskScreen() {
         print("ShowSingleTaskScreen was run to push")
         let singleTaskScreen = SingleTaskScreenViewController()
-        singleTaskScreen.onButtonBackTapped = { [self] in
-            _ = self.rootViewController.popViewController(animated: true)
-        }
+        singleTaskScreen.coordinator = self
         rootViewController.pushViewController(singleTaskScreen, animated: true)
+    }
+    
+    func showTasksScreenBack() {
+        print("ShowTasksScreen")
+        _ = self.rootViewController.popViewController(animated: true)
     }
     
 }

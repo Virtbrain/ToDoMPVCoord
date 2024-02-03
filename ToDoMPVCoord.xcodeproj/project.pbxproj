@@ -23,6 +23,9 @@
 		147FF6572B6C468D0054962B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF6562B6C468D0054962B /* CustomButton.swift */; };
 		147FF65B2B6C4C760054962B /* SingleTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF65A2B6C4C760054962B /* SingleTaskPresenter.swift */; };
 		147FF65D2B6C5AEB0054962B /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF65C2B6C5AEB0054962B /* CustomLabel.swift */; };
+		147FF65F2B6D4BA80054962B /* UIConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF65E2B6D4BA80054962B /* UIConsts.swift */; };
+		147FF6622B6DA7DE0054962B /* TaksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF6612B6DA7DE0054962B /* TaksList.swift */; };
+		147FF6642B6DAD370054962B /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF6632B6DAD370054962B /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		147FF6562B6C468D0054962B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		147FF65A2B6C4C760054962B /* SingleTaskPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTaskPresenter.swift; sourceTree = "<group>"; };
 		147FF65C2B6C5AEB0054962B /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		147FF65E2B6D4BA80054962B /* UIConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConsts.swift; sourceTree = "<group>"; };
+		147FF6612B6DA7DE0054962B /* TaksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaksList.swift; sourceTree = "<group>"; };
+		147FF6632B6DAD370054962B /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 		147FF60C2B6A98C60054962B /* ToDoMPVCoord */ = {
 			isa = PBXGroup;
 			children = (
+				147FF6602B6DA7CB0054962B /* MockData */,
 				147FF6532B6C1ED90054962B /* UIComponents */,
 				147FF64F2B6C18360054962B /* Screens */,
 				147FF64E2B6C182A0054962B /* SingleTaskScreen */,
@@ -216,6 +223,8 @@
 			children = (
 				147FF6562B6C468D0054962B /* CustomButton.swift */,
 				147FF65C2B6C5AEB0054962B /* CustomLabel.swift */,
+				147FF65E2B6D4BA80054962B /* UIConsts.swift */,
+				147FF6632B6DAD370054962B /* DateFormatter.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -234,6 +243,14 @@
 				147FF65A2B6C4C760054962B /* SingleTaskPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		147FF6602B6DA7CB0054962B /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				147FF6612B6DA7DE0054962B /* TaksList.swift */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,7 +383,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				147FF6622B6DA7DE0054962B /* TaksList.swift in Sources */,
 				147FF6182B6A98C60054962B /* ToDoMPVCoord.xcdatamodeld in Sources */,
+				147FF65F2B6D4BA80054962B /* UIConsts.swift in Sources */,
 				147FF65B2B6C4C760054962B /* SingleTaskPresenter.swift in Sources */,
 				147FF65D2B6C5AEB0054962B /* CustomLabel.swift in Sources */,
 				147FF6442B6ADC640054962B /* Coordinator.swift in Sources */,
@@ -374,6 +393,7 @@
 				147FF6492B6BD62F0054962B /* Model.swift in Sources */,
 				147FF6512B6C186B0054962B /* SingleTaskScreenViewController.swift in Sources */,
 				147FF64B2B6BD69F0054962B /* TaskParams.swift in Sources */,
+				147FF6642B6DAD370054962B /* DateFormatter.swift in Sources */,
 				147FF64D2B6BE0350054962B /* MainScreenViewController.swift in Sources */,
 				147FF60E2B6A98C60054962B /* AppDelegate.swift in Sources */,
 				147FF6102B6A98C60054962B /* SceneDelegate.swift in Sources */,

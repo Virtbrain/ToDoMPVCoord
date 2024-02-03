@@ -9,30 +9,29 @@ import UIKit
 
 class SingleTaskScreenViewController: UIViewController {
     
-    var onButtonBackTapped: (() -> Void )?
+    weak var coordinator: Coordinator?
     var presenter: SingleTaskPresenterProtocol?
     
     let label = CustomLabel(text: "SingleTaskScreenViewController")
-    let button = CustomButton(bgColor: .systemPink, titleColor: .black, text: "Go to Main Screen")
+    let button = CustomButton(bgColor: buttonBgColor, titleColor: .white, text: "Go to Main Screen")
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = .red
-        self.setupView()
+        view.backgroundColor = applicationBgColor
+        setupView()
     }
     
     private func setupView() {
-        self.view.addSubview(label)
-        self.view.addSubview(button)
+        view.addSubview(label)
+        view.addSubview(button)
         NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             label.widthAnchor.constraint(equalToConstant: 200),
             label.heightAnchor.constraint(equalToConstant: 50),
             
             button.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 70),
-            button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.widthAnchor.constraint(equalToConstant: 250),
             button.heightAnchor.constraint(equalToConstant: 60)
         ])
@@ -41,7 +40,7 @@ class SingleTaskScreenViewController: UIViewController {
     }
     
     @objc private func onButtonPress() {
-        self.onButtonBackTapped?()
+        coordinator?.showTasksScreenBack()
     }
 
 }
