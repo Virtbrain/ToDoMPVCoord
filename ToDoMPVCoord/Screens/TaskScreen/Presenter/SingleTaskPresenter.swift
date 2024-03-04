@@ -8,9 +8,12 @@
 import Foundation
 
 protocol SingleTaskPresenterProtocol {
-    
+    func getTaskParams() -> String
 }
 
-class SingleTaskPresenter {
+class SingleTaskPresenter: SingleTaskPresenterProtocol {
     
+    func getTaskParams() -> String {
+        return "This is function getTaskParams"
+    }
 }

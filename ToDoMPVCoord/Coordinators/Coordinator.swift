@@ -23,14 +23,13 @@ final class Coordinator {
     }
      
     func showSingleTaskScreen() {
-        print("ShowSingleTaskScreen was run to push")
         let singleTaskScreen = SingleTaskScreenViewController()
         singleTaskScreen.coordinator = self
+        singleTaskScreen.presenter = SingleTaskPresenter()
         rootViewController.pushViewController(singleTaskScreen, animated: true)
     }
     
     func showTasksScreenBack() {
-        print("ShowTasksScreen")
         _ = self.rootViewController.popViewController(animated: true)
     }
     

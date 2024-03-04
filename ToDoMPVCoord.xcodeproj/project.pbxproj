@@ -26,6 +26,12 @@
 		147FF65F2B6D4BA80054962B /* UIConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF65E2B6D4BA80054962B /* UIConsts.swift */; };
 		147FF6622B6DA7DE0054962B /* TaksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF6612B6DA7DE0054962B /* TaksList.swift */; };
 		147FF6642B6DAD370054962B /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF6632B6DAD370054962B /* DateFormatter.swift */; };
+		147FF6662B6F800C0054962B /* SharedFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF6652B6F800C0054962B /* SharedFuncs.swift */; };
+		147FF66B2B6FB4460054962B /* OpenDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF66A2B6FB4460054962B /* OpenDateView.swift */; };
+		147FF66D2B9061E70054962B /* CloseDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF66C2B9061E70054962B /* CloseDateView.swift */; };
+		147FF66F2B90C3070054962B /* StateStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF66E2B90C3060054962B /* StateStatusView.swift */; };
+		147FF6722B90C5D20054962B /* PriorityStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF6712B90C5D20054962B /* PriorityStatusView.swift */; };
+		147FF6752B90EC9A0054962B /* DatesVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FF6742B90EC9A0054962B /* DatesVStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,12 @@
 		147FF65E2B6D4BA80054962B /* UIConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConsts.swift; sourceTree = "<group>"; };
 		147FF6612B6DA7DE0054962B /* TaksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaksList.swift; sourceTree = "<group>"; };
 		147FF6632B6DAD370054962B /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		147FF6652B6F800C0054962B /* SharedFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFuncs.swift; sourceTree = "<group>"; };
+		147FF66A2B6FB4460054962B /* OpenDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDateView.swift; sourceTree = "<group>"; };
+		147FF66C2B9061E70054962B /* CloseDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseDateView.swift; sourceTree = "<group>"; };
+		147FF66E2B90C3060054962B /* StateStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateStatusView.swift; sourceTree = "<group>"; };
+		147FF6712B90C5D20054962B /* PriorityStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityStatusView.swift; sourceTree = "<group>"; };
+		147FF6742B90EC9A0054962B /* DatesVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesVStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +134,6 @@
 				147FF6602B6DA7CB0054962B /* MockData */,
 				147FF6532B6C1ED90054962B /* UIComponents */,
 				147FF64F2B6C18360054962B /* Screens */,
-				147FF64E2B6C182A0054962B /* SingleTaskScreen */,
 				147FF6422B6AD5D60054962B /* Coordinators */,
 				147FF6412B6AC4D90054962B /* Application */,
 				147FF6402B6AC4CB0054962B /* Resources */,
@@ -193,13 +204,6 @@
 			path = TaskScreen;
 			sourceTree = "<group>";
 		};
-		147FF64E2B6C182A0054962B /* SingleTaskScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SingleTaskScreen;
-			sourceTree = "<group>";
-		};
 		147FF64F2B6C18360054962B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +229,7 @@
 				147FF65C2B6C5AEB0054962B /* CustomLabel.swift */,
 				147FF65E2B6D4BA80054962B /* UIConsts.swift */,
 				147FF6632B6DAD370054962B /* DateFormatter.swift */,
+				147FF6652B6F800C0054962B /* SharedFuncs.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -232,7 +237,10 @@
 		147FF6582B6C4C510054962B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				147FF6732B90E9AD0054962B /* StackViews */,
 				147FF6502B6C186B0054962B /* SingleTaskScreenViewController.swift */,
+				147FF66E2B90C3060054962B /* StateStatusView.swift */,
+				147FF6712B90C5D20054962B /* PriorityStatusView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +259,24 @@
 				147FF6612B6DA7DE0054962B /* TaksList.swift */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		147FF6732B90E9AD0054962B /* StackViews */ = {
+			isa = PBXGroup;
+			children = (
+				147FF6762B95CD160054962B /* Dates */,
+			);
+			path = StackViews;
+			sourceTree = "<group>";
+		};
+		147FF6762B95CD160054962B /* Dates */ = {
+			isa = PBXGroup;
+			children = (
+				147FF66A2B6FB4460054962B /* OpenDateView.swift */,
+				147FF66C2B9061E70054962B /* CloseDateView.swift */,
+				147FF6742B90EC9A0054962B /* DatesVStackView.swift */,
+			);
+			path = Dates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,11 +413,17 @@
 				147FF6182B6A98C60054962B /* ToDoMPVCoord.xcdatamodeld in Sources */,
 				147FF65F2B6D4BA80054962B /* UIConsts.swift in Sources */,
 				147FF65B2B6C4C760054962B /* SingleTaskPresenter.swift in Sources */,
+				147FF6752B90EC9A0054962B /* DatesVStackView.swift in Sources */,
 				147FF65D2B6C5AEB0054962B /* CustomLabel.swift in Sources */,
 				147FF6442B6ADC640054962B /* Coordinator.swift in Sources */,
+				147FF66B2B6FB4460054962B /* OpenDateView.swift in Sources */,
+				147FF6662B6F800C0054962B /* SharedFuncs.swift in Sources */,
 				147FF6572B6C468D0054962B /* CustomButton.swift in Sources */,
 				147FF6492B6BD62F0054962B /* Model.swift in Sources */,
+				147FF66F2B90C3070054962B /* StateStatusView.swift in Sources */,
+				147FF6722B90C5D20054962B /* PriorityStatusView.swift in Sources */,
 				147FF6512B6C186B0054962B /* SingleTaskScreenViewController.swift in Sources */,
+				147FF66D2B9061E70054962B /* CloseDateView.swift in Sources */,
 				147FF64B2B6BD69F0054962B /* TaskParams.swift in Sources */,
 				147FF6642B6DAD370054962B /* DateFormatter.swift in Sources */,
 				147FF64D2B6BE0350054962B /* MainScreenViewController.swift in Sources */,

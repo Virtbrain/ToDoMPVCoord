@@ -14,4 +14,7 @@ struct Task {
     var priority: TaskPriorities
     let openDate: Date
     let closeDate: Date?
+    var id: Int {
+        openDate.hashValue
+    }
 }

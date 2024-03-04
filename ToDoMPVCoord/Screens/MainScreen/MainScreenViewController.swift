@@ -11,8 +11,6 @@ class MainScreenViewController: UIViewController {
     
     weak var coordinator: Coordinator?
     
-//    var onButtonTapped: (() -> Void)?
-    
     let button = CustomButton(bgColor: buttonBgColor, titleColor: .white, text: "Go to Second Screen")
 
     override func viewDidLoad() {
